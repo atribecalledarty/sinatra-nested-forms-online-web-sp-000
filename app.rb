@@ -6,7 +6,7 @@ module FormsLab
     
     set :views, Proc.new { File.join(root, "views/pirates") }
     # code other routes/actions here
-    get '/' do 
+    get '/new' do 
       erb :new
     end
     
