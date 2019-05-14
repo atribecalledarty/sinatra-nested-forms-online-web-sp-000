@@ -4,14 +4,14 @@ require './environment'
 module FormsLab
   class App < Sinatra::Base
     
-    set :views, Proc.new { File.join(root, "views/pirates") }
+    #set :views, Proc.new { File.join(root, "views/pirates") }
     # code other routes/actions here
     get '/' do
-      erb :
+      erb :root
     end
     
     get '/new' do 
-      erb :new
+      erb :"pirates/new"
     end
     
     post '/pirates' do
@@ -23,7 +23,7 @@ module FormsLab
       
       @ships = Ship.all
       
-      erb :show
+      erb :"pirates/show"
     end
   end
 end
